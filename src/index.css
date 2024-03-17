@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body{
+  background-color: #000300;
+}
+
+.text-1{
+  @apply md:text-7xl sm:text-6xl text-4xl;
+}
+
+.text-4{
+  @apply md:text-3xl sm:text-2xl text-xl;
+}
