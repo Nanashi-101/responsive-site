@@ -1,6 +1,16 @@
 import React, { useState } from "react";
-import { BiMenu, BiCodeAlt, BiExit } from "react-icons/bi";
+import {
+  BiMenu,
+  BiLogoFacebook,
+  BiLogoInstagram,
+  BiLogoTwitter,
+  BiLogoReddit,
+} from "react-icons/bi";
 import { AiOutlineClose } from "react-icons/ai";
+import { FadeIn, FadeInReverse } from "../assets/motionVariants";
+import { motion } from "framer-motion";
+
+
 
 const Navbar = () => {
   const [nav, setNav] = useState(true);
@@ -9,9 +19,16 @@ const Navbar = () => {
     setNav(!nav);
   };
   return (
-    <div className="flex justify-between items-center h-24 max-w-[1260px] mx-auto px-4 text-white">
-      <h1 className="w-full text-3xl text-[#ffbb00] font-bold">Krypto.</h1>
-      <ul className="hidden md:flex items-center">
+    <div className="flex justify-evenly items-center h-24 max-w-[1260px] mx-auto px-4 text-white">
+      <motion.h1 className="w-full text-4xl text-[#ffbb00] font-bold"
+      variants={FadeIn}
+      initial="hidden"
+      animate="visible"
+      >Krypto.</motion.h1>
+      <motion.ul className="hidden md:flex items-center"
+      variants={FadeInReverse}
+      initial="hidden"
+      animate="visible">
         <li className="p-3 hover:text-[#ffbb00] hover:scale-110 transition-all cursor-pointer text-lg font-semibold">
           Home
         </li>
@@ -27,11 +44,38 @@ const Navbar = () => {
         <li className="p-3 hover:text-[#ffbb00] hover:scale-110 transition-all cursor-pointer text-lg font-semibold">
           Contact
         </li>
-      </ul>
+      </motion.ul>
+      <motion.div className="hidden md:flex gap-3 ml-6 border-l border-l-[#ffbb00]"
+      variants={FadeInReverse}
+      initial="hidden"
+      animate="visible">
+        <BiLogoFacebook
+          size={30}
+          className="hover:text-[#ffbb00] hover:scale-110 transition-all cursor-pointer"
+        />
+        <BiLogoInstagram
+          size={30}
+          className="hover:text-[#ffbb00] hover:scale-110 transition-all cursor-pointer"
+        />
+        <BiLogoTwitter
+          size={30}
+          className="hover:text-[#ffbb00] hover:scale-110 transition-all cursor-pointer"
+        />
+        <BiLogoReddit
+          size={30}
+          className="hover:text-[#ffbb00] hover:scale-110 transition-all cursor-pointer"
+        />
+      </motion.div>
       <div onClick={handleNav} className="block md:hidden">
         {!nav ? <AiOutlineClose size={30} /> : <BiMenu size={30} />}
       </div>
-      <div className={!nav?"fixed left-0 top-0 w-[60%] h-full border-r border-r-gray-800 bg-[#000300] ease-in-out duration-500":"fixed left-[-100%] ease-in duration-500"}>
+      <div
+        className={
+          !nav
+            ? "fixed left-0 top-0 w-[60%] h-full border-r border-r-gray-800 bg-[#000300] ease-in-out duration-500"
+            : "fixed left-[-100%] ease-in duration-500"
+        }
+      >
         <h1 className="w-full text-3xl text-[#ffbb00] font-bold m-3">
           Krypto.
         </h1>
@@ -67,6 +111,24 @@ const Navbar = () => {
             Contact
           </li>
         </ul>
+        <div className="w-full flex gap-5 mt-8 text-center mx-auto justify-center">
+          <BiLogoFacebook
+            size={30}
+            className="hover:text-[#ffbb00] hover:scale-110 transition-all cursor-pointer"
+          />
+          <BiLogoInstagram
+            size={30}
+            className="hover:text-[#ffbb00] hover:scale-110 transition-all cursor-pointer"
+          />
+          <BiLogoTwitter
+            size={30}
+            className="hover:text-[#ffbb00] hover:scale-110 transition-all cursor-pointer"
+          />
+          <BiLogoReddit
+            size={30}
+            className="hover:text-[#ffbb00] hover:scale-110 transition-all cursor-pointer"
+          />
+        </div>
       </div>
     </div>
   );
