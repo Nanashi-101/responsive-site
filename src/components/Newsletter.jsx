@@ -28,7 +28,7 @@ const Newsletter = () => {
               placeholder="Enter your mail here"
             />
             <button className=" w-[180px] md:text-sm sm:text-md text-lg my-4 mx-auto sm:ml-4 border border-[#ffbb00] bg-[#ffbb00] py-3 text-center font-bold rounded-md transition-all hover:tracking-wider">
-              Notify me
+              Notify us
             </button>
           </div>
           <p className="my-1">

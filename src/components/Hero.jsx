@@ -2,7 +2,7 @@ import { FaBitcoin, FaEthereum } from "react-icons/fa6";
 import { HiCurrencyDollar } from "react-icons/hi";
 import { ReactTyped } from "react-typed";
 import React from 'react'
-import { FadeIn, FadeInReverse, OpacityIn } from "../assets/motionVariants";
+import { OpacityIn } from "../assets/motionVariants";
 import { motion } from "framer-motion";
 
 

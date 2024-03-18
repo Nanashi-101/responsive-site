@@ -10,8 +10,6 @@ import { AiOutlineClose } from "react-icons/ai";
 import { FadeIn, FadeInReverse } from "../assets/motionVariants";
 import { motion } from "framer-motion";
 
-
-
 const Navbar = () => {
   const [nav, setNav] = useState(true);
 
@@ -20,15 +18,20 @@ const Navbar = () => {
   };
   return (
     <div className="flex justify-evenly items-center h-24 max-w-[1260px] mx-auto px-4 text-white">
-      <motion.h1 className="w-full text-4xl text-[#ffbb00] font-bold"
-      variants={FadeIn}
-      initial="hidden"
-      animate="visible"
-      >Krypto.</motion.h1>
-      <motion.ul className="hidden md:flex items-center"
-      variants={FadeInReverse}
-      initial="hidden"
-      animate="visible">
+      <motion.h1
+        className="w-full text-4xl text-[#ffbb00] font-bold"
+        variants={FadeIn}
+        initial="hidden"
+        animate="visible"
+      >
+        €rypto.
+      </motion.h1>
+      <motion.ul
+        className="hidden md:flex items-center"
+        variants={FadeInReverse}
+        initial="hidden"
+        animate="visible"
+      >
         <li className="p-3 hover:text-[#ffbb00] hover:scale-110 transition-all cursor-pointer text-lg font-semibold">
           Home
         </li>
@@ -45,26 +48,31 @@ const Navbar = () => {
           Contact
         </li>
       </motion.ul>
-      <motion.div className="hidden md:flex gap-3 ml-6 border-l border-l-[#ffbb00]"
-      variants={FadeInReverse}
-      initial="hidden"
-      animate="visible">
-        <BiLogoFacebook
-          size={30}
-          className="hover:text-[#ffbb00] hover:scale-110 transition-all cursor-pointer"
-        />
-        <BiLogoInstagram
-          size={30}
-          className="hover:text-[#ffbb00] hover:scale-110 transition-all cursor-pointer"
-        />
-        <BiLogoTwitter
-          size={30}
-          className="hover:text-[#ffbb00] hover:scale-110 transition-all cursor-pointer"
-        />
-        <BiLogoReddit
-          size={30}
-          className="hover:text-[#ffbb00] hover:scale-110 transition-all cursor-pointer"
-        />
+      <motion.div
+        className="hidden md:flex md:flex-col ml-6 border-l border-l-[#ffbb00]"
+        variants={FadeInReverse}
+        initial="hidden"
+        animate="visible"
+      >
+        <p className="text-sm ml-2 font-thin text-[#ffbb00]">Find us on :</p>
+        <div className="flex gap-2">
+          <BiLogoFacebook
+            size={30}
+            className="hover:text-[#ffbb00] hover:scale-110 transition-all cursor-pointer"
+          />
+          <BiLogoInstagram
+            size={30}
+            className="hover:text-[#ffbb00] hover:scale-110 transition-all cursor-pointer"
+          />
+          <BiLogoTwitter
+            size={30}
+            className="hover:text-[#ffbb00] hover:scale-110 transition-all cursor-pointer"
+          />
+          <BiLogoReddit
+            size={30}
+            className="hover:text-[#ffbb00] hover:scale-110 transition-all cursor-pointer"
+          />
+        </div>
       </motion.div>
       <div onClick={handleNav} className="block md:hidden">
         {!nav ? <AiOutlineClose size={30} /> : <BiMenu size={30} />}
@@ -111,23 +119,26 @@ const Navbar = () => {
             Contact
           </li>
         </ul>
-        <div className="w-full flex gap-5 mt-8 text-center mx-auto justify-center">
-          <BiLogoFacebook
-            size={30}
-            className="hover:text-[#ffbb00] hover:scale-110 transition-all cursor-pointer"
-          />
-          <BiLogoInstagram
-            size={30}
-            className="hover:text-[#ffbb00] hover:scale-110 transition-all cursor-pointer"
-          />
-          <BiLogoTwitter
-            size={30}
-            className="hover:text-[#ffbb00] hover:scale-110 transition-all cursor-pointer"
-          />
-          <BiLogoReddit
-            size={30}
-            className="hover:text-[#ffbb00] hover:scale-110 transition-all cursor-pointer"
-          />
+        <div className="w-full flex flex-col items-center gap-2 mt-8 text-center mx-auto justify-center">
+          <p className="text-sm ml-2 font-thin text-[#ffbb00]">Find us on :</p>
+          <div className="flex gap-5">
+            <BiLogoFacebook
+              size={30}
+              className="hover:text-[#ffbb00] hover:scale-110 transition-all cursor-pointer"
+            />
+            <BiLogoInstagram
+              size={30}
+              className="hover:text-[#ffbb00] hover:scale-110 transition-all cursor-pointer"
+            />
+            <BiLogoTwitter
+              size={30}
+              className="hover:text-[#ffbb00] hover:scale-110 transition-all cursor-pointer"
+            />
+            <BiLogoReddit
+              size={30}
+              className="hover:text-[#ffbb00] hover:scale-110 transition-all cursor-pointer"
+            />
+          </div>
         </div>
       </div>
     </div>
