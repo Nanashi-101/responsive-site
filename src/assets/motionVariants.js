@@ -1,6 +1,6 @@
 const FadeIn = {
     hidden:{
-        x: -100,
+        x: -50,
         opacity: 0
     },
     visible:{
@@ -16,7 +16,7 @@ const FadeIn = {
 
 const FadeInReverse = {
     hidden:{
-        x: 100,
+        x: 50,
         opacity: 0
     },
     visible:{

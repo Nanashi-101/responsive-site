@@ -5,7 +5,7 @@ import svg3 from '../assets/svg3.png';
 
 const Features = () => {
   return (
-    <div className='w-full py-[10rem] px-4 bg-[#ffbb00]'>
+    <div className='w-full py-[10rem] px-4 bg-[#ffbb00]' id='company'>
       <h1 className='text-3xl md:text-5xl sm:text-4xl font-bold text-center mb-6'>Explore new heights with us, right beside you!</h1>
       <div className="max-w-[1240px] mx-auto mt-[5rem] grid md:grid-cols-3 gap-8">
         <div className="w-full bg-white shadow-2xl px-4 rounded-lg hover:scale-105 duration-300 hover:bg-slate-100">

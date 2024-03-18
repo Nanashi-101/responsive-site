@@ -8,12 +8,12 @@ import {
   BiLogoReddit,
 } from "react-icons/bi";
 
-const Footer = () => {
+const Footer = () => { 
   return (
-    <div className="bg-[#ffbb00]">
-      <div className="max-w-[1240px] mx-auto py-16 px-4 grid lg:grid-cols-3 gap-4">
+    <div className=" w-full bg-[#ffbb00]">
+      <div className="max-w-[1240px] mx-auto py-16 px-4 grid lg:grid-cols-3 gap-8">
         <motion.div variants={FadeIn} initial="hidden" animate="visible">
-          <h1 className="w-full text-4xl font-bold">€rypto.</h1>
+          <h1 className="text-4xl font-bold">€rypto.</h1>
           <p
             className="text-white py-4 font-semibold text-lg"
             variants={FadeIn}

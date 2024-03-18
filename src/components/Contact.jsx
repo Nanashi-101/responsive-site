@@ -11,7 +11,7 @@ import {
 
 const Contact = () => {
   return (
-    <div className="w-full text-white px-4 py-16">
+    <div className="w-full text-white px-4 py-16" id="contact">
       <div className="max-w-[1240px] mx-auto grid md:grid-cols-2 gap-10 items-center">
         <div className="contact-info flex flex-col">
           <h1 className="text-4xl text-[#ffbb00] font-bold py-2">Contact Us</h1>

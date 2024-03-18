@@ -9,6 +9,7 @@ import {
 import { AiOutlineClose } from "react-icons/ai";
 import { FadeIn, FadeInReverse } from "../assets/motionVariants";
 import { motion } from "framer-motion";
+import { Link } from "react-scroll";
 
 const Navbar = () => {
   const [nav, setNav] = useState(true);
@@ -33,19 +34,19 @@ const Navbar = () => {
         animate="visible"
       >
         <li className="p-3 hover:text-[#ffbb00] hover:scale-110 transition-all cursor-pointer text-lg font-semibold">
-          Home
+          <Link to="/" offset={10} duration={300}>Home</Link>
         </li>
         <li className="p-3 hover:text-[#ffbb00] hover:scale-110 transition-all cursor-pointer text-lg font-semibold">
-          Company
+          <Link to="company" offset={170} duration={300}>Company</Link>
         </li>
         <li className="p-3 hover:text-[#ffbb00] hover:scale-110 transition-all cursor-pointer text-lg font-semibold">
-          Resources
+          <Link to="resources" offset={10} duration={300}>Resources</Link>
         </li>
         <li className="p-3 hover:text-[#ffbb00] hover:scale-110 transition-all cursor-pointer text-lg font-semibold">
-          About
+          <Link to="about" offset={100} duration={300}>About</Link>
         </li>
         <li className="p-3 hover:text-[#ffbb00] hover:scale-110 transition-all cursor-pointer text-lg font-semibold">
-          Contact
+          <Link to="contact" offset={10} duration={300}>Contact</Link>
         </li>
       </motion.ul>
       <motion.div

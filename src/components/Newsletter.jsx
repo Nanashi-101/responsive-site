@@ -1,10 +1,11 @@
 import React from "react";
 import {motion} from 'framer-motion'
 import { FadeIn, FadeInReverse } from "../assets/motionVariants";
+import { BiLinkExternal } from "react-icons/bi";
 
 const Newsletter = () => {
   return (
-    <div className="w-full py-16 text-white px-4">
+    <div className="w-full py-16 text-white px-4" id="resources">
       <div className="max-w-[1240px] mx-auto grid lg:grid-cols-3">
         <motion.div className="lg:col-span-2 my-5 "
         variants={FadeIn}
@@ -33,7 +34,7 @@ const Newsletter = () => {
           </div>
           <p className="my-1">
             We care about the protection of your data. Read our
-            <span className="text-[#ffbb00] underline ml-1">Privacy policy</span>.
+            <span className="text-[#ffbb00] underline ml-1 flex items-center gap-1 cursor-pointer hover:text-white duration-300">Privacy policy.<BiLinkExternal className="mt-1" size={20}/> </span>
           </p>
         </motion.div>
       </div>
