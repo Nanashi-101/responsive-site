@@ -8,11 +8,16 @@ import {
   BiLogoReddit,
 } from "react-icons/bi";
 
-const Footer = () => { 
+const Footer = () => {
   return (
     <div className=" w-full bg-[#ffbb00]">
-      <div className="max-w-[1240px] mx-auto py-16 px-4 grid lg:grid-cols-3 gap-8">
-        <motion.div variants={FadeIn} initial="hidden" animate="visible">
+      <motion.div
+        variants={FadeIn}
+        initial="hidden"
+        animate="visible"
+        className="max-w-[1240px] mx-auto py-16 px-4 grid lg:grid-cols-3 gap-8"
+      >
+        <div className="max-w-[1240px] flex flex-col">
           <h1 className="text-4xl font-bold">€rypto.</h1>
           <p
             className="text-white py-4 font-semibold text-lg"
@@ -41,7 +46,7 @@ const Footer = () => {
               className="hover:text-white hover:scale-105 transition-all cursor-pointer duration-300"
             />
           </div>
-        </motion.div>
+        </div>
         <motion.div className="flex justify-between lg:col-span-2">
           <div className="font-medium">
             <h6 className="font-bold text-white">Solutions</h6>
@@ -79,8 +84,17 @@ const Footer = () => {
             </ul>
           </div>
         </motion.div>
-      </div>
-      <h2 className="text-center text-sm">Developed and maintained by © <a href="https://github.com/Nanashi-101" target="_main" className="hover:text-white  duration-300">~Nanashi_101</a></h2>
+      </motion.div>
+      <h2 className="text-center text-sm">
+        Developed and maintained by ©{" "}
+        <a
+          href="https://github.com/Nanashi-101"
+          target="_main"
+          className="hover:text-white  duration-300"
+        >
+          ~Nanashi_101
+        </a>
+      </h2>
     </div>
   );
 };
