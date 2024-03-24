@@ -4,6 +4,7 @@ import { ReactTyped } from "react-typed";
 import React from 'react'
 import { OpacityIn } from "../assets/motionVariants";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 
 const Hero = () => {
@@ -30,8 +31,8 @@ const Hero = () => {
             <FaEthereum size={40}/>
             <HiCurrencyDollar size={45}/>
         </div>
-        <button className=" w-[180px] md:text-xl sm:text-lg text-md md:my-10 sm:my-8 my-6 border border-[#ffbb00] bg-[#ffbb00] py-2 text-center font-bold rounded-md transition-all
-        hover:tracking-wider">Get Started</button>
+        <Link to='/any' className=" w-[180px] md:text-xl sm:text-lg text-md md:my-10 sm:my-8 my-6 border border-[#ffbb00] bg-[#ffbb00] py-2 text-center font-bold rounded-md transition-all
+        hover:tracking-wider">Get Started</Link>
       </div>
     </motion.div>
   )

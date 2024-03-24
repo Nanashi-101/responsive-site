@@ -17,3 +17,7 @@ body{
 .text-4{
   @apply md:text-3xl sm:text-2xl text-xl;
 }
+
+/* .button-1{
+  @apply w-[180px] md:text-sm sm:text-md text-lg my-2 mx-auto sm:ml-0  border border-[#ffbb00] bg-[#ffbb00] py-3 text-center font-bold rounded-md transition-all hover:tracking-wider;
+} */

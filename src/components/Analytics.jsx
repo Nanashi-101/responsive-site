@@ -2,6 +2,7 @@ import React from "react";
 import phone from "../assets/main_img.png";
 import { FadeIn, FadeInReverse } from "../assets/motionVariants";
 import { motion } from "framer-motion";
+import { Link } from 'react-router-dom'
 
 const Analytics = () => {
   return (
@@ -29,7 +30,7 @@ const Analytics = () => {
             seamlessly. Stay informed with real-time updates and personalized
             insights. Your gateway to crypto success awaits.
           </p>
-          <button className="text-black w-[180px] md:text-xl sm:text-lg text-md md:my-10 sm:my-8 my-6 border border-white bg-white py-2 text-center font-bold rounded-md transition-all hover:tracking-wider md:mx-0 mx-auto">Read more</button>
+          <Link to="/any" className="text-black w-[180px] md:text-xl sm:text-lg text-md md:my-10 sm:my-8 my-6 border border-white bg-white py-2 text-center font-bold rounded-md transition-all hover:tracking-wider md:mx-0 mx-auto">Read more</Link>
         </motion.div>
       </div>
     </div>
