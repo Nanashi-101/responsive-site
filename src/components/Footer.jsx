@@ -32,7 +32,7 @@ const Footer = () => {
             ~Nanashi_101
           </a>
         </h2>
-        <div className="flex md:w-[75%] sm:gap-4 gap-24 my-4 text-[#ffbb00]">
+        <div className="flex justify-between md:w-[75%] sm:gap-4 my-4 text-[#ffbb00]">
           <BiLogoFacebook
             size={30}
             className="hover:text-white hover:scale-105 transition-all cursor-pointer duration-300"
