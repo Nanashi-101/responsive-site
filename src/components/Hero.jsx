@@ -16,7 +16,7 @@ const Hero = () => {
     >
       <div className='max-w-[800px] mx-auto h-screen flex flex-col text-center justify-center items-center'>
         <p className="uppercase md:text-3xl sm:text-2xl text-md font-medium p-2">See your money grow!</p>
-        <h1 className="uppercase text-1 md:py-4 text-[#ffbb00] font-extrabold">Invest in crypto</h1>
+        <h1 className="uppercase text-1 md:py-4 text-[#fff] font-extrabold">Invest in crypto</h1>
         <div className="flex items-center flex-wrap justify-center">
             <p className="md:text-5xl sm:text-4xl text-xl font-medium p-[0.1rem]">Fast, Flexible financing for</p>
             <ReactTyped 
