@@ -6,10 +6,17 @@ import Newsletter from "../components/Newsletter";
 import Features from "../components/Features";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
+import { motion } from 'framer-motion';
+import { OpacityIn } from "../assets/motionVariants";
+
 
 export default function Home() {
   return (
-    <div>
+    <motion.div
+    variants={OpacityIn}
+    initial="hidden"
+    animate="visible"
+    >
       <Navbar/>
       <Hero/>
       <Analytics/>
@@ -17,6 +24,6 @@ export default function Home() {
       <Features/>
       <Contact/>
       <Footer/>
-    </div>
+    </motion.div>
   )
 }

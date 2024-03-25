@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
-import { FadeIn, FadeInReverse } from "../assets/motionVariants";
+// import { FadeIn, FadeInReverse } from "../assets/motionVariants";
 import { BiLinkExternal } from "react-icons/bi";
 
 const Newsletter = () => {
@@ -31,9 +31,6 @@ const Newsletter = () => {
       <div className="max-w-[1240px] mx-auto grid lg:grid-cols-3">
         <motion.div
           className="lg:col-span-2 my-5 "
-          variants={FadeIn}
-          initial="hidden"
-          animate="visible"
         >
           <h1 className="text-4 text-[#ffbb00] font-bold py-2">
             Want tips & tricks to manage your money?
@@ -42,9 +39,6 @@ const Newsletter = () => {
         </motion.div>
         <motion.div
           className="my-4"
-          variants={FadeInReverse}
-          initial="hidden"
-          animate="visible"
         >
           <div className="flex flex-col sm:flex-row items-center justify-between w-full my-2 sm:my-0">
             <input
