@@ -88,7 +88,7 @@ const Navbar = () => {
           }
         >
           <h1 className="w-full text-3xl text-[#ffbb00] font-bold m-3">
-            Krypto.
+          €rypto.
           </h1>
           <ul className="uppercase">
             <li className="p-3 hover:text-[#ffbb00] transition-all cursor-pointer text-lg font-semibold">
