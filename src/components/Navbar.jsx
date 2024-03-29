@@ -21,7 +21,11 @@ const Navbar = ({ MobileScreen }) => {
   useEffect(() => {
     const bodyStyle = document.body.style;
     bodyStyle.overflowY = !nav ? "hidden" : "auto";
-    MobileScreen(nav)
+    // bodyStyle.pointerEvents = !nav ? "none" : "auto";
+    MobileScreen(nav);
+    // if(window.innerWidth > 768){
+    //   setNav(false)
+    // }
   }, [nav]);
 
   return (
@@ -78,19 +82,28 @@ const Navbar = ({ MobileScreen }) => {
             />
           </div>
         </motion.div>
-        <div onClick={handleNav} className="block md:hidden cursor-pointer h[100vh] overflow-hidden">
-          {!nav ? <AiOutlineClose size={30} /> : <BiMenu size={30} />}
+        <div
+            onClick={handleNav}
+            className="block md:hidden cursor-pointer hover:text-[#ffbb00] duration-300"
+          >
+            {nav && <BiMenu size={35} />}
         </div>
         <div
           className={
-            !nav
-              ? "fixed left-0 top-0 w-[70%] h-full border-r border-r-gray-800 bg-[#000300] ease-in-out duration-500 z-20"
+            !nav && window.innerWidth < 768
+              ? "fixed left-0 top-0 w-[70%] h-[100vh] border-r border-r-gray-800 bg-[#000300] ease-in-out duration-500 z-20 overflow-hidden"
               : "fixed left-[-100%] ease-in duration-500"
           }
         >
-          <h1 className="w-full text-3xl text-[#ffbb00] font-bold m-3">
-            €rypto.
-          </h1>
+          <div
+            onClick={handleNav}
+            className="flex md:hidden cursor-pointer h[100vh] overflow-hidden items-center"
+          >
+            <h1 className="w-full text-3xl text-[#ffbb00] font-bold m-3">
+              €rypto.
+            </h1>
+            <AiOutlineClose size={35} className="mr-[20px] mt-2 hover:text-[#ffbb00] duration-300"/>
+          </div>
           <ul className="uppercase">
             <li className="p-3 hover:text-[#ffbb00] transition-all cursor-pointer text-lg font-semibold">
               <Link to="home" offset={-100} duration={300}>
