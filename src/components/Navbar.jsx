@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   BiMenu,
   BiLogoFacebook,
@@ -11,23 +11,26 @@ import { AiOutlineClose } from "react-icons/ai";
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
 
-const Navbar = () => {
+const Navbar = ({ MobileScreen }) => {
   const [nav, setNav] = useState(true);
 
   const handleNav = () => {
     setNav(!nav);
   };
+
+  useEffect(() => {
+    const bodyStyle = document.body.style;
+    bodyStyle.overflowY = !nav ? "hidden" : "auto";
+    MobileScreen(nav)
+  }, [nav]);
+
   return (
     <div className="w-full fixed bg-black z-20">
       <div className="flex justify-between items-center h-24 mx-auto max-w-[1260px] px-4 text-white">
-        <motion.h1
-          className="w-full text-4xl text-[#ffbb00] font-bold"
-        >
+        <motion.h1 className="w-full text-4xl text-[#ffbb00] font-bold">
           €rypto.
         </motion.h1>
-        <motion.ul
-          className="hidden md:flex items-center"
-        >
+        <motion.ul className="hidden md:flex items-center">
           <li className="p-3 hover:text-[#ffbb00] hover:scale-110 transition-all cursor-pointer text-lg font-semibold">
             <Link to="home" offset={-100} duration={300}>
               Home
@@ -54,9 +57,7 @@ const Navbar = () => {
             </Link>
           </li>
         </motion.ul>
-        <motion.div
-          className="hidden md:flex md:flex-col ml-6 border-l border-l-[#ffbb00]"
-        >
+        <motion.div className="hidden md:flex md:flex-col ml-6 border-l border-l-[#ffbb00]">
           <p className="text-sm ml-2 font-thin text-[#ffbb00]">Find us on :</p>
           <div className="flex gap-2">
             <BiLogoFacebook
@@ -77,18 +78,18 @@ const Navbar = () => {
             />
           </div>
         </motion.div>
-        <div onClick={handleNav} className="block md:hidden">
+        <div onClick={handleNav} className="block md:hidden cursor-pointer h[100vh] overflow-hidden">
           {!nav ? <AiOutlineClose size={30} /> : <BiMenu size={30} />}
         </div>
         <div
           className={
             !nav
-              ? "fixed left-0 top-0 w-[60%] h-full border-r border-r-gray-800 bg-[#000300] ease-in-out duration-500 z-20"
+              ? "fixed left-0 top-0 w-[70%] h-full border-r border-r-gray-800 bg-[#000300] ease-in-out duration-500 z-20"
               : "fixed left-[-100%] ease-in duration-500"
           }
         >
           <h1 className="w-full text-3xl text-[#ffbb00] font-bold m-3">
-          €rypto.
+            €rypto.
           </h1>
           <ul className="uppercase">
             <li className="p-3 hover:text-[#ffbb00] transition-all cursor-pointer text-lg font-semibold">
