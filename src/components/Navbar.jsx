@@ -22,10 +22,6 @@ const Navbar = ({ MobileScreen }) => {
     const bodyStyle = document.body.style;
     bodyStyle.overflowY = !nav ? "hidden" : "auto";
     // bodyStyle.pointerEvents = !nav ? "none" : "auto";
-    MobileScreen(nav);
-    // if(window.innerWidth > 768){
-    //   setNav(false)
-    // }
   }, [nav]);
 
   return (
