@@ -28,6 +28,11 @@ const Navbar = ({ MobileScreen }) => {
     // }
   }, [nav]);
 
+  window.addEventListener("resize", () =>{
+    const nav = document.getElementById("hidden-nav");
+    nav.classList.add('hidden');
+  })
+
   return (
     <div className="w-full fixed bg-black z-20">
       <div className="flex justify-between items-center h-24 mx-auto max-w-[1260px] px-4 text-white">
@@ -94,6 +99,8 @@ const Navbar = ({ MobileScreen }) => {
               ? "fixed left-0 top-0 w-[70%] h-[100vh] border-r border-r-gray-800 bg-[#000300] ease-in-out duration-500 z-20 overflow-hidden"
               : "fixed left-[-100%] ease-in duration-500"
           }
+
+          id="hidden-nav"
         >
           <div
             onClick={handleNav}
