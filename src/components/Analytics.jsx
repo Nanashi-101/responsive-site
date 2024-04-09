@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 
 const Analytics = () => {
   return (
-    <div className="w-full bg-[#ffbb00] py-16 px-4" id="about">
+    <div className="w-full bg-[#e3b22b] py-16 px-4" id="about">
       <div className="mx-w-[1240px] mx-auto grid md:grid-cols-2">
         <motion.img className="w-[500px] mx-auto my-4" src={phone} alt="/" 
         />

@@ -32,7 +32,7 @@ const Newsletter = () => {
         <motion.div
           className="lg:col-span-2 my-5 "
         >
-          <h1 className="text-4 text-[#ffbb00] font-bold py-2">
+          <h1 className="text-4 text-[#e3b22b] font-bold py-2">
             Want tips & tricks to manage your money?
           </h1>
           <p>Sign up to our newsletter and stay up to date</p>
@@ -49,7 +49,7 @@ const Newsletter = () => {
               onChange={(mail) => setMail(mail.target.value)}
             />
             <button
-              className=" w-[180px] md:text-sm sm:text-md text-lg my-4 mx-auto sm:ml-4 border border-[#ffbb00] bg-[#ffbb00] py-3 text-center font-bold rounded-md transition-all hover:tracking-wider"
+              className=" w-[180px] md:text-sm sm:text-md text-lg my-4 mx-auto sm:ml-4 border border-[#e3b22b] bg-[#e3b22b] py-3 text-center font-bold rounded-md transition-all hover:tracking-wider"
               onClick={sendEmail}
             >
               Notify us
@@ -57,7 +57,7 @@ const Newsletter = () => {
           </div>
           <p className="my-1">
             We care about the protection of your data. Read our
-            <span className="text-[#ffbb00] underline ml-1 flex items-center gap-1 cursor-pointer hover:text-white duration-300">
+            <span className="text-[#e3b22b] underline ml-1 flex items-center gap-1 cursor-pointer hover:text-white duration-300">
               Privacy policy.
               <BiLinkExternal className="mt-1" size={20} />{" "}
             </span>
